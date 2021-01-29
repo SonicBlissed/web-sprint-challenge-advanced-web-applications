@@ -21,9 +21,20 @@ const BubblePage = () => {
 
   }, []);
 
+  const getColorList = () => {
+    axiosWithAuth()
+    .get(`http://localhost:5000/api/colors`)
+    .then(res => {
+      setColorList(res.data)
+    })
+    .catch(err => {
+      console.log(err, 'getcolorlist error')
+    })
+  }
+
   return (
     <>
-      <ColorList colors={colorList} updateColors={setColorList} />
+      <ColorList colors={colorList} getColorList={getColorList} />
       <Bubbles colors={colorList} />
     </>
   );

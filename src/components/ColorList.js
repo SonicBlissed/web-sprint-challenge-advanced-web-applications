@@ -26,8 +26,8 @@ const ColorList = ({ colors, updateColors }, props) => {
     axiosWithAuth()
     .put(`http://localhost:5000/api/colors/${id}`, colorToEdit)
     .then(res => {
-      console.log(colorToEdit)
-      props.setColorList()
+      console.log(res.data)
+      props.getColorList()
       
     })
     .catch(err => {
