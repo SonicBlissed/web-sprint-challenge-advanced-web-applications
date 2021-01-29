@@ -102,11 +102,18 @@ button {
 }
 
 .login-form {
+
+  display: flex;
   align-self: center;
-  margin: 0 auto;
+  margin: 10%;
   border: 1px solid black;
   border-radius: 5px;
-  padding: 36px;
+  padding: 15%;
+
+
+  h1 {
+    
+  }
 
   form {
     margin-top: 0;
@@ -116,4 +123,13 @@ button {
     width: 200px;
     margin-left: 16px;
   }
+
+}
+
+.login-page {
+  display:flexbox;
+  justify-content: center;
+  // margin: 20%;
+  border: 1px solid black;
+  padding: 15%;
 }
